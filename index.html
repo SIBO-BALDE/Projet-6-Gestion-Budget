@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="index.css">
+      <title>Gestion de Budget</title>
+      <script src="https://kit.fontawesome.com/5b5597629e.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 id="gestion"><marquee behavior="alternate">Gestion de mon budget</marquee></h1>
+      </div>
+       <div class="budget_container">
+      <div class="balance">
+        <h2>Balance<br><span id="idbalance">0.00</span></h2>
+      </div>
+      <div id="incom">
+        <h2>Incoms<br><span id="idincom">+0.00</span></h2>
+      </div>
+      <div id="expense">
+        <h2>Expenses<br><span id="idexpense">-0.00</span></h2>
+      </div>
+    </div>
+      <div class="formulaire">
+        <form >
+          <div class="input">
+            <select  id="idselect">
+              <option value="+" class="plus" >+</option>
+              <option value="-"  class="minus">-</option>
+            </select> 
+            <input type="text" id="iddescription" name="description" placeholder="Description">
+            <input type="number" id ="idmontant"placeholder="Montant">
+            <button type="submit"id="idbutton">Envoyer</button> 
+          </div>
+        </form>
+      </div>
+      <div class="départage">
+        <div class="entréclass">
+          <h2 id="revenu"><strong>ACTIFS</strong></h2>
+        </div>
+        <div class="sorticlass">
+          <h2 id="dépense"><strong>PASSIFS</strong></h2>
+        </div>
+      </div> 
+     <div class="contenu">
+       <div class="list1">
+           <ul id="revenu_1">  
+           <!-- <li id="identré">+revenues      200 </li>  -->
+          </ul> 
+           <span ><i class="fa-solid fa-trash" id="button_1"></i></span>
+      </div> 
+       <div class="list2">
+          <ul id="dépense_2">
+          <!-- <li id="idsorti">-dépenses     200 </li> -->
+          </ul>
+          <span id="button_2"><i class="fa-solid fa-trash" ></i></span> 
+       </div>
+     </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>   
+
