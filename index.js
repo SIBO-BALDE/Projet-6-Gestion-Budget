@@ -1,3 +1,79 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // recuperer les element html par le DOM par la methode getElementByid   
 const incomEl=document.getElementById("idincom");
 const expenseEl=document.getElementById("idexpense");
@@ -8,6 +84,8 @@ const selectEl=document.getElementById("idselect");
 const values = selectEl.options[selectEl.selectedIndex].value;
 
 let solde=0
+ let revenu=0
+ let depense =0
 
 const tabdépense=[]
 // let initialDépense =[]
@@ -25,64 +103,52 @@ const values = select.options[select.selectedIndex].value;
     var montant = document.getElementById("idmontant").value;
     const parsed = parseInt(montant);
     var incomValue=incomEl.value
-    // var expenseValue=expenseEl.value
+    
+    
+  
     
     const balanceEl=document.getElementById("idbalance");
 
     const balanceValue=balanceEl.value
     
-    // const descriptionEl=document.getElementById("iddescription").value;
+    
+    
 
 // pour enlever la function par défaut dunavigateur
 event.preventDefault()
 
 
 
-      
-  
-
-
-    // function somme(parsedin) {
-
-        if(values ==="+"){
-            let incomValue=0;
-            let parsedin = parseInt(incomValue);
-
-        // var sum=0;
-        // for(var i=0;i<=parsedin.lenth;i++) {
-        //   sum += i;
-        // }
-        // return sum;
-     
-    
-    // for (let i = 0; i>incomEl.lenth; i++) {
-    //     // incomEl = parseInt($('incomEl'+montant).innerHTML);
-        incomEl.innerHTML=`${parsedin += parsed } FCFA`;
+        if(values ==="+" ){
          
-        // }
+        
+        incomEl.innerHTML=`${revenu += parsed } FCFA`;
+       
+         
+       
          balanceEl.innerHTML=`${solde += parsed}  FCFA`;
          
-         addTransactionIncom()
+         addTransactionIncom();
+         console.log('nombre plus est superieur à 0')
         }
-        // }
+        
    
 
 
-    else if(values ==="-"){
-        let expenseValue=0
-        let parsedex = parseInt(expenseValue);
+   if(values ==="-" ){
+        
 
        
-        expenseEl.innerHTML=  `${parsedex += parsed}  FCFA`;
+        expenseEl.innerHTML=  `${depense+= parsed}  FCFA`;
        
 
         balanceEl.innerHTML= `${solde -= parsed}  FCFA`
       
         addTransactionExpense()
+        console.log('soustraction plus grand à 0')
        
                                                           
     } 
-
 
 // les fonctions  pour creer l'historique des transactions
 
@@ -194,6 +260,9 @@ var select = listItems.parentNode;
 
 liste.parentNode.removeChild(liste)         
 });
+
+
+
 
 
 
