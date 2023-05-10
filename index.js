@@ -12,8 +12,6 @@ let solde=0
  let depense =0
 
 const tabdépense=[]
-// let initialDépense =[]
-// let initialRevenu =[]
 
 
 
@@ -27,51 +25,33 @@ const values = select.options[select.selectedIndex].value;
     var montant = document.getElementById("idmontant").value;
     const parsed = parseInt(montant);
     var incomValue=incomEl.value
-    
-    
-  
-    
     const balanceEl=document.getElementById("idbalance");
 
     const balanceValue=balanceEl.value
     
-    
-    
-
-// pour enlever la function par défaut dunavigateur
+// pour enlever la function par défaut dunavigateur le raffraichissement automatique
 event.preventDefault()
 
 
 
-        if(values ==="+" ){
-         
-        
+  if(values ==="+" ){
         incomEl.innerHTML=`${revenu += parsed } FCFA`;
-       
-         
-       
-         balanceEl.innerHTML=`${solde += parsed}  FCFA`;
+        balanceEl.innerHTML=`${solde += parsed}  FCFA`;
          
          addTransactionIncom();
-         console.log('nombre plus est superieur à 0')
+         console.log('Revenue calculer avec succées')
         }
         
    
 
 
    if(values ==="-" ){
-        
-
-       
         expenseEl.innerHTML=  `${depense+= parsed}  FCFA`;
-       
-
         balanceEl.innerHTML= `${solde -= parsed}  FCFA`
       
         addTransactionExpense()
-        console.log('soustraction plus grand à 0')
-       
-                                                          
+        console.log('Depense calculée avec succées')
+                                                           
     } 
 
 // les fonctions  pour creer l'historique des transactions
